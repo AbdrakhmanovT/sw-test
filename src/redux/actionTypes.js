@@ -1,0 +1,10 @@
+export const movieListLoading = 'MOVIE_LIST_LOADING';
+export const setMovieList = 'SET_MOVIE_LIST';
+export const movieListLoaded = 'MOVIE_LIST_LOADED';
+export const movieLoading = 'MOVIE_LOADING';
+export const setMovie = 'SET_MOVIE';
+export const movieLoaded = 'MOVIE_LOADED';
+export const reviewPending = 'REVIEW_PENDING';
+export const reviewSubmittedSuccessfully = 'REVIEW_SUBMITTED_SUCCESSFULLY';
+export const reviewReset = 'REVIEW_RESET';
+export const setReview = 'SET_REVIEW';

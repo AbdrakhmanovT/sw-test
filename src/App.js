@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Row, Col } from 'react-bootstrap';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import MovieList from './components/MovieList';
+import Movie from './components/Movie';
+import Review from './components/Review';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid>
+      <Router>
+        <Switch>
+          <Route path="/review">
+            <Review />
+          </Route>
+          <Route path="/">
+            <Row className="justify-content-center my-3">
+              <Col xs={3}>
+                <MovieList />
+              </Col>
+              <Col xs={5}>
+                <Movie />
+              </Col>
+            </Row>
+          </Route>
+        </Switch>
+      </Router>
+    </Container>
   );
 }
 
